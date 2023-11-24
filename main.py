@@ -19,6 +19,7 @@ class SinglyLinkedList:
     def add_node(self, data):
         """
         Add a node to the end of the linked list.
+        Time complexity: O(n), where n is the number of nodes in the linked list.
         """
         new_node = Node(data)
         if not self.head:
@@ -28,7 +29,7 @@ class SinglyLinkedList:
             while temp.next:
                 temp = temp.next
             temp.next = new_node
-
+            
 def main():
     errors = 0
 
