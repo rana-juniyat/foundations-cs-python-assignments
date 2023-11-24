@@ -1,3 +1,14 @@
+# Define the Node class for a singly linked list
+class Node:
+    def __init__(self, data):
+        """
+        Node class for a singly linked list.
+        Parameters:
+        - data: The data to be stored in the node.
+        """
+        self.data = data
+        self.next = None
+
 def main():
     errors = 0
 
