@@ -1,1 +1,57 @@
-#test commit :)
+def main():
+    errors = 0
+
+    while True:
+        print("\nWelcome to the program!")
+        name = input("Enter your name: ")
+        print(f"Hello, {name}!")
+
+        print("\nChoose an option:")
+        print("1. Singly Linked List")
+        print("2. Check if Palindrome")
+        print("3. Priority Queue")
+        print("4. Evaluate an Infix Expression")
+        print("5. Graph")
+        print("6. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            linked_list = SinglyLinkedList()
+            while True:
+                print("\nSingly Linked List Menu:")
+                print("a. Add Node")
+                print("b. Display Nodes")
+                print("c. Search for & Delete Node")
+                print("d. Return to main menu")
+
+                sub_choice = input("Enter your choice: ")
+
+                if sub_choice == 'a':
+                    value = int(input("Enter a numerical value: "))
+                    linked_list.add_node(value)
+                elif sub_choice == 'b':
+                    linked_list.display_nodes()
+                elif sub_choice == 'c':
+                    value = int(input("Enter a value to search and delete: "))
+                    linked_list.search_and_delete(value)
+                elif sub_choice == 'd':
+                    break
+                else:
+                    print("Invalid choice! Please try again.")
+
+        elif choice == '6':
+            print("Goodbye!")
+            break
+
+        else:
+            print("Error: Invalid choice! Please try again.")
+            errors += 1
+
+            if errors >= 4:
+                print("Too many consecutive errors. Exiting.")
+                break
+
+
+if __name__ == "__main__":
+    main()
