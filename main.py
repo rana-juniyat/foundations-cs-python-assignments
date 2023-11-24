@@ -40,8 +40,26 @@ class SinglyLinkedList:
             print(temp.data, end=" ")
             temp = temp.next
         print()
-        
 
+    def search_and_delete(self, value):
+        """
+        Search for a value in the linked list and delete all nodes with that value.
+        """
+        current = self.head
+        previous = None
+
+        while current:
+            if current.data == value:
+                if previous:
+                    previous.next = current.next
+                else:
+                    self.head = current.next
+                current = None
+                return
+            else:
+                previous = current
+                current = current.next
+                
 def main():
     errors = 0
 
