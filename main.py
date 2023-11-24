@@ -30,6 +30,16 @@ class SinglyLinkedList:
                 temp = temp.next
             temp.next = new_node
             
+    def display_nodes(self):
+        """
+        Display all nodes in the linked list.
+        """
+        temp = self.head
+        while temp:
+            print(temp.data, end=" ")
+            temp = temp.next
+        print()
+
 def main():
     errors = 0
 
