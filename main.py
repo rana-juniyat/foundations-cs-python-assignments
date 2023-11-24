@@ -44,6 +44,7 @@ class SinglyLinkedList:
     def search_and_delete(self, value):
         """
         Search for a value in the linked list and delete all nodes with that value.
+        Time complexity: O(n), where n is the number of nodes in the linked list.
         """
         current = self.head
         previous = None
@@ -59,7 +60,6 @@ class SinglyLinkedList:
             else:
                 previous = current
                 current = current.next
-                
 def main():
     errors = 0
 
