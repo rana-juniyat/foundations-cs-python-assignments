@@ -8,6 +8,26 @@ class Node:
         """
         self.data = data
         self.next = None
+# Define the SinglyLinkedList class
+class SinglyLinkedList:
+    def __init__(self):
+        """
+        SinglyLinkedList class to manage the linked list operations.
+        """
+        self.head = None
+
+    def add_node(self, data):
+        """
+        Add a node to the end of the linked list.
+        """
+        new_node = Node(data)
+        if not self.head:
+            self.head = new_node
+        else:
+            temp = self.head
+            while temp.next:
+                temp = temp.next
+            temp.next = new_node
 
 def main():
     errors = 0
