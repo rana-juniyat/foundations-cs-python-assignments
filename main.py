@@ -33,12 +33,14 @@ class SinglyLinkedList:
     def display_nodes(self):
         """
         Display all nodes in the linked list.
+        Time complexity: O(n), where n is the number of nodes in the linked list.
         """
         temp = self.head
         while temp:
             print(temp.data, end=" ")
             temp = temp.next
         print()
+        
 
 def main():
     errors = 0
