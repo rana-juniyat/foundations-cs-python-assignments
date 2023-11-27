@@ -60,6 +60,23 @@ class SinglyLinkedList:
             else:
                 previous = current
                 current = current.next
+###################################################################################################
+def is_palindrome(s):
+    """
+    Check if a string is a palindrome using a stack.
+    Time complexity: O(n), where n is the length of the string.
+    """
+    stack = []
+
+    for char in s:
+        stack.append(char)
+
+    for char in s:
+        if char != stack.pop():
+            return False
+
+    return True
+#####################################################################################################
 def main():
     errors = 0
 
@@ -101,6 +118,14 @@ def main():
                     break
                 else:
                     print("Invalid choice! Please try again.")
+                    
+        elif choice == '2':
+            string_to_check = input("Enter a string to check if it's a palindrome: ")
+            
+            if is_palindrome(string_to_check):
+                print(f"{string_to_check} is a palindrome.")
+            else:
+                print(f"{string_to_check} is not a palindrome.")
 
         elif choice == '6':
             print("Goodbye!")
